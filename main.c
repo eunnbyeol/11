@@ -2,20 +2,21 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-void swap (int *x, int *y) {
-	int temp;
-	temp = *x;
-	*x = *y;
-	*y = temp;
-}
-
 int main(int argc, char *argv[]) {
-	int a = 3;
-	int b = 5;
+	char *pc;
+	int *pi;
+	double *pd;
 	
-	swap(&a, &b);
-	printf("a:%i, b:%i\n", a, b);
+	pc=(char *)10000;
+	pi=(int *)10000;
+	pd=(double *)10000;
 	
+	printf("증가전 : pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+	
+	pc++;
+	pi++;
+	pd++;
+	printf("증가 후 : pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
 	
 	return 0;
 }
